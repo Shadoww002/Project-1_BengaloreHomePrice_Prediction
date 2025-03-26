@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Bangalore Home Price Prediction</h2>
+        
+        <label>Area (Square Feet)</label>
+        <input type="number" id="uiSqft" value="1000">
+        
+        <label>BHK</label>
+        <select id="uiBHK">
+            <option value="1">1 BHK</option>
+            <option value="2" selected>2 BHK</option>
+            <option value="3">3 BHK</option>
+            <option value="4">4 BHK</option>
+            <option value="5">5 BHK</option>
+        </select>
+        
+        <label>Bath</label>
+        <select id="uiBathrooms">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        
+        <label>Location</label>
+        <select id="uiLocations">
+            <option disabled selected>Choose a Location</option>
+            <option>Electronic City</option>
+            <option>Rajaji Nagar</option>
+        </select>
+        
+        <button onclick="onClickedEstimatePrice()">Estimate Price</button>
+        <div id="uiEstimatedPrice" class="result">Estimated Price: --</div>
+    </div>
+</body>
+</html>
